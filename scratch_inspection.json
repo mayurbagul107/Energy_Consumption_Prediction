@@ -1,0 +1,463 @@
+{
+  "datasets": {
+    "Energy_Consumption_Virtual.csv": {
+      "shape": [
+        30000,
+        11
+      ],
+      "columns": [
+        "Timestamp",
+        "Temperature",
+        "Humidity",
+        "SquareFootage",
+        "Occupancy",
+        "HVACUsage",
+        "LightingUsage",
+        "RenewableEnergy",
+        "DayOfWeek",
+        "Holiday",
+        "EnergyConsumption"
+      ],
+      "filesize": 2942168
+    },
+    "data/Energy_Consumption_Virtual.csv": {
+      "shape": [
+        30000,
+        11
+      ],
+      "columns": [
+        "Timestamp",
+        "Temperature",
+        "Humidity",
+        "SquareFootage",
+        "Occupancy",
+        "HVACUsage",
+        "LightingUsage",
+        "RenewableEnergy",
+        "DayOfWeek",
+        "Holiday",
+        "EnergyConsumption"
+      ],
+      "filesize": 2942168
+    },
+    "data/Energy_Consumption_30000_Augmented.csv": {
+      "shape": [
+        30000,
+        11
+      ],
+      "columns": [
+        "Timestamp",
+        "Temperature",
+        "Humidity",
+        "SquareFootage",
+        "Occupancy",
+        "HVACUsage",
+        "LightingUsage",
+        "RenewableEnergy",
+        "DayOfWeek",
+        "Holiday",
+        "EnergyConsumption"
+      ],
+      "filesize": 2942168
+    }
+  },
+  "main_dataset": {
+    "shape": [
+      30000,
+      11
+    ],
+    "columns": [
+      "Timestamp",
+      "Temperature",
+      "Humidity",
+      "SquareFootage",
+      "Occupancy",
+      "HVACUsage",
+      "LightingUsage",
+      "RenewableEnergy",
+      "DayOfWeek",
+      "Holiday",
+      "EnergyConsumption"
+    ],
+    "dtypes": {
+      "Timestamp": "object",
+      "Temperature": "float64",
+      "Humidity": "float64",
+      "SquareFootage": "float64",
+      "Occupancy": "int64",
+      "HVACUsage": "object",
+      "LightingUsage": "object",
+      "RenewableEnergy": "float64",
+      "DayOfWeek": "object",
+      "Holiday": "object",
+      "EnergyConsumption": "float64"
+    },
+    "missing": {
+      "Timestamp": 0,
+      "Temperature": 0,
+      "Humidity": 0,
+      "SquareFootage": 0,
+      "Occupancy": 0,
+      "HVACUsage": 0,
+      "LightingUsage": 0,
+      "RenewableEnergy": 0,
+      "DayOfWeek": 0,
+      "Holiday": 0,
+      "EnergyConsumption": 0
+    },
+    "duplicates": 0,
+    "describe": {
+      "Temperature": {
+        "count": 30000.0,
+        "mean": 24.976987172511,
+        "std": 2.8436907187271445,
+        "min": 20.00756508,
+        "25%": 22.6336928075,
+        "50%": 24.740848205,
+        "75%": 27.3999843725,
+        "max": 29.99867084
+      },
+      "Humidity": {
+        "count": 30000.0,
+        "mean": 45.416286146987666,
+        "std": 8.536748321676505,
+        "min": 30.0159745,
+        "25%": 38.324025275,
+        "50%": 45.908015355,
+        "75%": 52.5637726425,
+        "max": 59.9690849
+      },
+      "SquareFootage": {
+        "count": 30000.0,
+        "mean": 1501.179695384,
+        "std": 289.40595383448004,
+        "min": 1000.512661,
+        "25%": 1244.1361645,
+        "50%": 1509.7931245,
+        "75%": 1746.170687,
+        "max": 1999.982252
+      },
+      "Occupancy": {
+        "count": 30000.0,
+        "mean": 4.596433333333334,
+        "std": 2.8586196556670944,
+        "min": 0.0,
+        "25%": 2.0,
+        "50%": 5.0,
+        "75%": 7.0,
+        "max": 10.0
+      },
+      "RenewableEnergy": {
+        "count": 30000.0,
+        "mean": 15.047512374662865,
+        "std": 8.728610282150138,
+        "min": 0.006642105,
+        "25%": 7.5402098637499995,
+        "50%": 14.992172400000001,
+        "75%": 22.66893219,
+        "max": 29.96532734
+      },
+      "EnergyConsumption": {
+        "count": 30000.0,
+        "mean": 77.02274467678566,
+        "std": 8.135413842607024,
+        "min": 53.26327834,
+        "25%": 71.4885038425,
+        "50%": 76.882003265,
+        "75%": 82.7502896125,
+        "max": 99.20111959
+      }
+    },
+    "categoricals": {
+      "HVACUsage": {
+        "Off": 15223,
+        "On": 14777
+      },
+      "LightingUsage": {
+        "Off": 15324,
+        "On": 14676
+      },
+      "DayOfWeek": {
+        "Sunday": 4306,
+        "Friday": 4300,
+        "Tuesday": 4298,
+        "Saturday": 4295,
+        "Monday": 4275,
+        "Thursday": 4274,
+        "Wednesday": 4252
+      },
+      "Holiday": {
+        "No": 16077,
+        "Yes": 13923
+      }
+    },
+    "target_correlations": {
+      "Temperature": 0.6944533460090354,
+      "Humidity": -0.09257248468236184,
+      "SquareFootage": -0.0003397546785279668,
+      "Occupancy": 0.19186020219805583,
+      "RenewableEnergy": 0.07294944318946986,
+      "EnergyConsumption": 1.0
+    }
+  },
+  "saved_models": {
+    "best_model_name": "Random Forest",
+    "best_r2": 0.9870810534418308,
+    "feature_names": [
+      "Temperature",
+      "Humidity",
+      "SquareFootage",
+      "Occupancy",
+      "RenewableEnergy",
+      "HVACUsage_On",
+      "LightingUsage_On",
+      "DayOfWeek_Monday",
+      "DayOfWeek_Saturday",
+      "DayOfWeek_Sunday",
+      "DayOfWeek_Thursday",
+      "DayOfWeek_Tuesday",
+      "DayOfWeek_Wednesday",
+      "Holiday_Yes"
+    ],
+    "num_cols": [
+      "Temperature",
+      "Humidity",
+      "SquareFootage",
+      "Occupancy",
+      "RenewableEnergy"
+    ],
+    "cat_cols": [
+      "HVACUsage",
+      "LightingUsage",
+      "DayOfWeek",
+      "Holiday"
+    ],
+    "train_samples": 24000,
+    "test_samples": 6000,
+    "results": {
+      "Random Forest": {
+        "r2": 0.9870810534418308,
+        "mae": 0.4555299408480341,
+        "mse": 0.8284110498220396,
+        "rmse": 0.9101708904497219,
+        "feature_importances": {
+          "Temperature": 0.535355656539909,
+          "SquareFootage": 0.09847996415470027,
+          "RenewableEnergy": 0.08882919925329341,
+          "HVACUsage_On": 0.08182513164987315,
+          "Humidity": 0.08120613099127325,
+          "Occupancy": 0.07921482490261277,
+          "Holiday_Yes": 0.019159526646760815,
+          "LightingUsage_On": 0.015437047860734137,
+          "DayOfWeek_Tuesday": 8.985130891179e-05,
+          "DayOfWeek_Thursday": 8.93026619690807e-05,
+          "DayOfWeek_Monday": 8.471557263839851e-05,
+          "DayOfWeek_Sunday": 7.766826401774034e-05,
+          "DayOfWeek_Wednesday": 7.763459628801577e-05,
+          "DayOfWeek_Saturday": 7.334559701797629e-05
+        }
+      },
+      "Gradient Boosting": {
+        "r2": 0.875183170736941,
+        "mae": 2.196704936362832,
+        "mse": 8.003720744543593,
+        "rmse": 2.829084789210743,
+        "feature_importances": {
+          "Temperature": 0.5839338670167776,
+          "HVACUsage_On": 0.09387332060861284,
+          "Occupancy": 0.08472135452151898,
+          "RenewableEnergy": 0.08132229979717692,
+          "Humidity": 0.07071615890150439,
+          "SquareFootage": 0.0638585766020741,
+          "LightingUsage_On": 0.012605780596321229,
+          "Holiday_Yes": 0.008967860074034167,
+          "DayOfWeek_Thursday": 5.852135683408136e-07,
+          "DayOfWeek_Wednesday": 7.201446927884995e-08,
+          "DayOfWeek_Sunday": 6.568737248381432e-08,
+          "DayOfWeek_Saturday": 5.2221714904478785e-08,
+          "DayOfWeek_Monday": 6.744854529072456e-09,
+          "DayOfWeek_Tuesday": 0.0
+        }
+      },
+      "Linear Regression": {
+        "r2": 0.6165102045483468,
+        "mae": 3.962222580308551,
+        "mse": 24.59079636375272,
+        "rmse": 4.958910804173908,
+        "feature_importances": {
+          "Temperature": 5.652140514764235,
+          "HVACUsage_On": 4.600222987269774,
+          "LightingUsage_On": 1.6173367672527355,
+          "Occupancy": 1.4958713828373897,
+          "RenewableEnergy": 0.6273078986155125,
+          "Humidity": 0.39376601797613187,
+          "Holiday_Yes": 0.39314768811465106,
+          "DayOfWeek_Thursday": 0.1834883517603269,
+          "DayOfWeek_Monday": 0.12157893525252428,
+          "SquareFootage": 0.10010436713244857,
+          "DayOfWeek_Sunday": 0.08909796601565027,
+          "DayOfWeek_Tuesday": 0.06871708330746025,
+          "DayOfWeek_Saturday": 0.061768035825070594,
+          "DayOfWeek_Wednesday": 0.04944813581098784
+        }
+      },
+      "Support Vector Regressor": {
+        "r2": 0.7157388346418305,
+        "mae": 2.990251968350464,
+        "mse": 18.22788641145745,
+        "rmse": 4.269412888379086,
+        "feature_importances": {}
+      }
+    }
+  },
+  "notebook": {
+    "total_cells": 39,
+    "nbformat": 4,
+    "interesting_cells": [
+      {
+        "cell_idx": 0,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 1,
+        "cell_type": "markdown",
+        "source_snippet": "# **Load the dataset**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 2,
+        "cell_type": "code",
+        "source_snippet": "file_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(file_path)\nenergy_data.head(5)\n",
+        "output_snippet": "          Timestamp  Temperature   Humidity  SquareFootage  Occupancy  \\\n0  01-01-2022 00:00    25.139433  43.431581    1565.693999          5   \n1  01-01-2022 01:00    27.731651  54.225919    1411.064918          1   \n2  01-01-2022 02:00    28.704277  58.907658    1755.715009          2   \n3  01-01"
+      },
+      {
+        "cell_idx": 3,
+        "cell_type": "code",
+        "source_snippet": "# Display the first few rows of the dataset\nprint(energy_data.head())\n# Get basic information\nprint(energy_data.info())\n# Get statistical summary\nprint(energy_data.describe())\n# Check for missing values\nprint(energy_data.isnull().sum())",
+        "output_snippet": "          Timestamp  Temperature   Humidity  SquareFootage  Occupancy  \\\n0  01-01-2022 00:00    25.139433  43.431581    1565.693999          5   \n1  01-01-2022 01:00    27.731651  54.225919    1411.064918          1   \n2  01-01-2022 02:00    28.704277  58.907658    1755.715009          2   \n3  01-01"
+      },
+      {
+        "cell_idx": 4,
+        "cell_type": "markdown",
+        "source_snippet": "# **encoding**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 5,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\n\n\n# Convert 'Timestamp' to datetime specifying format='mixed' and dayfirst=True\nenergy_data['Timestamp'] = pd.to_datetime(energy_data['Timestamp'], format='mixed', dayfirst=True)\n\n# Extract additional features from 'Timestamp'\nenergy_data['Hour'] = energy_data['Timestamp'].dt.hou",
+        "output_snippet": "   Temperature   Humidity  SquareFootage  Occupancy  RenewableEnergy  \\\n0    25.139433  43.431581    1565.693999          5         2.774699   \n1    27.731651  54.225919    1411.064918          1        21.831384   \n2    28.704277  58.907658    1755.715009          2         6.764672   \n3    20.0804"
+      },
+      {
+        "cell_idx": 6,
+        "cell_type": "markdown",
+        "source_snippet": "# **Visualization**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 7,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Pairplot\nsns.pairplot(energy_data[['Temperature', 'Humidity', 'SquareFootage', 'Occupancy', 'RenewableEnergy', 'EnergyConsumption']])\nplt.show()\n\n# Scatter Plots\nplt.figure(figsize=(8, 6))\nsns.scatterplot(x='Temperature', y",
+        "output_snippet": "<Figure size 1500x1500 with 42 Axes> <Figure size 800x600 with 1 Axes> <Figure size 800x600 with 1 Axes> <Figure size 1000x600 with 1 Axes> <Figure size 1000x600 with 1 Axes> <Figure size 1200x600 with 1 Axes>"
+      },
+      {
+        "cell_idx": 8,
+        "cell_type": "markdown",
+        "source_snippet": "# **Outliers**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 9,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom scipy.stats import zscore\n\n# Reload the original dataset to ensure 'Timestamp' is present\nfile_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(file_path)\n\n# Convert 'Timestamp' to datetime speci",
+        "output_snippet": "<Figure size 1500x1000 with 6 Axes> Number of outliers detected using Z-scores: 0\nEmpty DataFrame\nColumns: [Temperature, Humidity, SquareFootage, Occupancy, RenewableEnergy, EnergyConsumption, Hour, Day, Month, Year, HVACUsage_On, LightingUsage_On, DayOfWeek_Monday, DayOfWeek_Saturday, DayOfWeek_Sun"
+      },
+      {
+        "cell_idx": 11,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load the dataset\nfile_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(file_path)\n\n# Convert 'Timestamp' to datetime specifying format='mixed' and dayfirst=True\nenergy_data['Timestamp'] = pd.to_dat",
+        "output_snippet": "<Figure size 1400x1000 with 2 Axes>"
+      },
+      {
+        "cell_idx": 13,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\n# Load the dataset\nfile_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(file_path)\n\n# Convert 'Timestamp' to datetime specifying format='mixed' and dayfirst=True\nenergy_data['Timestamp'] = pd.to_dat",
+        "output_snippet": "   Weekend       mean     median       std        min       max\n0  Weekday  76.999052  76.857801  8.139469  53.263278  99.20112\n1  Weekend  77.081777  76.931287  8.125475  53.263278  99.20112\n <Figure size 1000x600 with 1 Axes> <Figure size 1000x600 with 1 Axes>"
+      },
+      {
+        "cell_idx": 15,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport plotly.express as px\n\n# Load the dataset\nfile_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(file_path)\n\n# Plotly histogram\nfig = px.histogram(energy_data, x=\"Temperature\", y=\"EnergyConsumption\", marginal=\"rug\",\n                   hover_data=ene",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 16,
+        "cell_type": "markdown",
+        "source_snippet": "# **RandomForestRegressor feature importances**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 17,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport numpy as np\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestRegressor\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Load the dataset\nfile_path = \"/content/Energy_Consumption_Virtual.csv\"\nenergy_data = pd.read_csv(fil",
+        "output_snippet": "<Figure size 1200x800 with 1 Axes>"
+      },
+      {
+        "cell_idx": 19,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport numpy as np\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_squared_error\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Load the dataset\nfile_path = \"/content/Energy_Consump",
+        "output_snippet": "<Figure size 1200x800 with 1 Axes> Mean Squared Error: 0.9892993878884381\nR-squared: 0.9845720238462466\n"
+      },
+      {
+        "cell_idx": 21,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Load the dataset\nfile_path = \"/content/En",
+        "output_snippet": "Mean Absolute Error (MAE): 0.46\nMean Squared Error (MSE): 0.83\nR-squared (R2) Score: 0.9871\n <Figure size 1000x600 with 1 Axes>"
+      },
+      {
+        "cell_idx": 22,
+        "cell_type": "markdown",
+        "source_snippet": "# **GridSearchCV and hyperparameters for RandomForestRegressor**",
+        "output_snippet": ""
+      },
+      {
+        "cell_idx": 23,
+        "cell_type": "code",
+        "source_snippet": "import pandas as pd\nimport numpy as np\nfrom sklearn.model_selection import train_test_split, RandomizedSearchCV\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_squared_error, r2_score\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Load the dataset\nfile_p",
+        "output_snippet": "Starting fast randomized hyperparameter search...\nFitting 3 folds for each of 10 candidates, totalling 30 fits\n\nBest Hyperparameters: {'n_estimators': 50, 'min_samples_split': 2, 'max_depth': None}\nTuned Mean Squared Error: 0.9002148492801898\nTuned R-squared: 0.9859612839166988\n <Figure size 1000x60"
+      },
+      {
+        "cell_idx": 27,
+        "cell_type": "code",
+        "source_snippet": "from sklearn.svm import SVR\nfrom sklearn.preprocessing import StandardScaler\n\n# Scale the data for SVR\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# Initialize the model\nsvr = SVR(kernel='rbf')\n\n# Fit the model on scaled training",
+        "output_snippet": "Support Vector Regressor:\nMean Squared Error: 21.660063822865357\nR-squared: 0.6622145406748927\n"
+      },
+      {
+        "cell_idx": 29,
+        "cell_type": "code",
+        "source_snippet": "from sklearn.linear_model import LinearRegression\n\n# Initialize the model\nlr = LinearRegression()\n\n# Fit the model on training data\nlr.fit(X_train, y_train)\n\n# Make predictions\ny_pred_lr = lr.predict(X_test)\n\n# Evaluate the model\nmse_lr = mean_squared_error(y_test, y_pred_lr)\nr2_lr = r2_score(y_test",
+        "output_snippet": "Linear Regression:\nMean Squared Error: 24.58834695407852\nR-squared: 0.6165484027262765\n"
+      },
+      {
+        "cell_idx": 31,
+        "cell_type": "code",
+        "source_snippet": "from sklearn.ensemble import GradientBoostingRegressor\n\n# Initialize the model\ngbr = GradientBoostingRegressor(n_estimators=100, max_depth=5, random_state=42)\n\n# Fit the model on training data\ngbr.fit(X_train, y_train)\n\n# Make predictions\ny_pred_gbr = gbr.predict(X_test)\n\n# Evaluate the model\nmse_gb",
+        "output_snippet": "Gradient Boosting Regressor:\nMean Squared Error: 8.346633231611083\nR-squared: 0.8698355017319157\n"
+      },
+      {
+        "cell_idx": 33,
+        "cell_type": "code",
+        "source_snippet": "from sklearn.preprocessing import PolynomialFeatures, StandardScaler\nfrom sklearn.linear_model import Ridge\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.model_selection import GridSearchCV\n\n# Example pipeline with polynomial features and Ridge regression\npipe = Pipeline([\n    ('poly', Polynomi",
+        "output_snippet": "Best Parameters: {'ridge__alpha': 10.0}\nBest Mean Squared Error: 25.249552595241433\nTuned Mean Squared Error: 24.107317067143867\nTuned R-squared: 0.624049991947625\n"
+      },
+      {
+        "cell_idx": 36,
+        "cell_type": "code",
+        "source_snippet": "import numpy as np\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import PolynomialFeatures, StandardScaler\nfrom sklearn.linear_model import Ridge\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.model_selection import GridSearchCV\nfrom sklearn.",
+        "output_snippet": "Best Parameters: {'ridge__alpha': 10.0}\nBest Mean Squared Error: 31.21101349810071\nTuned Mean Squared Error: 25.32173040149474\nTuned R-squared: 0.6051113974305947\n"
+      }
+    ]
+  }
+}

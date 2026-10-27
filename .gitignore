@@ -1,0 +1,6 @@
+.venv/*
+.streamlit/*
+.ipynb_checkpoints/*
+__pycache__/*
+*.docx*
+*.pdf*
